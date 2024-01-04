@@ -1,0 +1,156 @@
+// todo
+.todo {
+  &__block {
+    &_logo {
+      background: $blue-bg;
+      height: 800px;
+			padding-top: 65px;
+			.logo {
+				width: 186px;
+				height: 119px;
+				display: block;
+				margin: auto;
+				img {
+					width: 100%;
+				}
+			}
+    }
+		&_list {
+			margin-top: -500px;
+			.name {
+				text-align: center;
+			}
+			.lists {
+				.container {
+					width: 70%;
+					margin: 10px auto 30px;
+					border: 1px solid #efefef;
+					// all checkbox
+					.checkbox {
+						width: 20px;
+						height: 20px;
+					}
+					// text input
+					.text-input {
+						border: 1px solid #dedede;
+						padding-left: 10px;
+						width: 70%;
+						height: 35px;
+						color: $text;
+						outline: none;
+					}
+					.panel, li {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						list-style-type: none;
+						padding: 10px;
+						border-bottom: 1px solid #efefef;
+						background-color: $field-valid;
+						&__input-btn {
+							display: flex;
+							width: 100%;
+							justify-content: space-between;
+							margin-left: 20px;
+							.btn {
+								color: $white;
+								background-color: $blue;
+								outline: 0;
+								width: 100px;
+								height: 38px;
+								cursor: pointer;
+								font-size: 14px;
+								&:hover {
+									color: $blue;
+									background-color: $white;
+									border: 1px solid $blue;
+								}
+							}
+						}
+					}
+					/* Task  area */
+					.list {
+						.list-item {
+							li {
+								background-color: $blue;
+								.inp-t {
+									display: flex;
+									justify-content: space-between;
+									align-items: center;
+									width: 100%;
+									.list-btn {
+										display: flex;
+										.delete, .edit {
+											background-color: $white;
+											color: $blue;
+											font-size: 20px;
+											border: 0;
+											width: 100px;
+											height: 30px;
+											cursor: pointer;
+											&:hover {
+												background-color: $blue;
+												border: 1px solid $white;
+												color: $white;
+											}
+										}
+										.delete {
+											margin-right: 10px;
+										}
+									}
+									label {
+										margin-left: 20px;
+										padding-right: 10px;
+										display: inline-block;
+										width: 70%;
+										font-size: 18px;
+										line-height: 24px;
+										color: #fcfcfc;
+										z-index: 2;
+										overflow: hidden;
+									}
+								}
+							}
+							li.done label {
+								color: #d9d9d9;
+								text-decoration: line-through;
+							}
+						}
+					}
+				}
+			}
+		}
+  }
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+	.todo__block_list .lists .container {
+		width: 90%;
+	}
+}	
+@media screen and (max-width: 500px) {
+	.todo__block_list .lists .container {
+		.panel__input-btn {
+			flex-direction: column;
+			.btn {
+				width: 50%;
+				margin: auto;
+			}
+		}
+		.text-input {
+			width: 100%;
+			margin-bottom: 15px;
+		}
+		.list .list-item li .inp-t {
+			flex-direction: column;
+			label {
+				width: 100%;
+				margin-left: 0;
+				margin-bottom: 20px;
+				text-align: center;
+			}
+		}
+	}
+}

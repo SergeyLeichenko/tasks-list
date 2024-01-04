@@ -1,0 +1,37 @@
+// spesification
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+.wrap {
+  max-width: 1165px;
+  margin: 0 auto;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+// color
+$black: #333333;
+$blue-bg: linear-gradient(180deg, #00A9E7 0%, #005B9F 100%);
+$blue: #0076C0;
+$field-focus: #101010;
+$field-error: #D60000;
+$field-valid: #9A9A9A;
+$white: #ffffff;
+$text: #333333;
